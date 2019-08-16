@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9jI-ok-gR6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Papyrus.ttc">
+            <string>Papyrus</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Options View Controller-->
+        <scene sceneID="ChB-3W-RsE">
+            <objects>
+                <viewController storyboardIdentifier="OptionsViewController" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9jI-ok-gR6" customClass="OptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r3o-mm-FDZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="jgT-6d-FMv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fOj-0z-AtR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opus' Tic Tac Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlq-si-hnQ" userLabel="Game Title">
+                                <rect key="frame" x="28" y="28" width="319" height="62"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thd-iS-rlr">
+                                <rect key="frame" x="87" y="98" width="200" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Cxg-yC-3VL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <state key="normal" title="One Player">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onePlayerSelected:" destination="9jI-ok-gR6" eventType="touchUpInside" id="MCe-c8-L5a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUC-tS-e5P">
+                                <rect key="frame" x="87" y="171" width="200" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3mW-xb-Qiq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <state key="normal" title="Two Players">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="twoPlayersSelected:" destination="9jI-ok-gR6" eventType="touchUpInside" id="vOR-aC-9xa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwq-bz-t2T">
+                                <rect key="frame" x="87" y="244" width="200" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="QVC-hX-s7h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <state key="normal" title="Computer Plays Itself">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="computerPlaysItselfSelected:" destination="9jI-ok-gR6" eventType="touchUpInside" id="jUX-Io-k9q"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4cW-a2-aDA" customClass="DifficultySlider">
+                                <rect key="frame" x="39" y="379" width="296" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="rjr-B3-Ece"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFT-Ni-G2L" userLabel="Computer Difficulty Label">
+                                <rect key="frame" x="112" y="361" width="150" height="26.5"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaP-WZ-0oW">
+                                <rect key="frame" x="41" y="400" width="150" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="4il-Zb-c60"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzQ-sw-ZJa">
+                                <rect key="frame" x="183" y="400" width="150" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ahZ-zW-dHm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AIz-oE-YVN">
+                                <rect key="frame" x="83" y="451" width="51" height="31"/>
+                                <connections>
+                                    <action selector="computerGoesFirstChanged:" destination="9jI-ok-gR6" eventType="valueChanged" id="2F8-kp-frG"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer goes first" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpt-8D-vuq">
+                                <rect key="frame" x="140" y="456" width="149" height="26"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Thd-iS-rlr" firstAttribute="centerX" secondItem="fOj-0z-AtR" secondAttribute="centerX" id="60x-Zr-8p4"/>
+                            <constraint firstItem="fzQ-sw-ZJa" firstAttribute="top" secondItem="4cW-a2-aDA" secondAttribute="bottom" constant="-9" id="6EA-gg-lkS"/>
+                            <constraint firstItem="UFT-Ni-G2L" firstAttribute="centerX" secondItem="4cW-a2-aDA" secondAttribute="centerX" id="73g-B3-CrG"/>
+                            <constraint firstItem="gUC-tS-e5P" firstAttribute="top" secondItem="Thd-iS-rlr" secondAttribute="bottom" constant="30" id="7kL-kZ-Mpk"/>
+                            <constraint firstItem="4cW-a2-aDA" firstAttribute="centerX" secondItem="fOj-0z-AtR" secondAttribute="centerX" id="Fg4-5g-bNs"/>
+                            <constraint firstItem="Nlq-si-hnQ" firstAttribute="centerX" secondItem="fOj-0z-AtR" secondAttribute="centerX" id="GFF-xt-ZBO"/>
+                            <constraint firstItem="tpt-8D-vuq" firstAttribute="top" secondItem="AIz-oE-YVN" secondAttribute="bottom" constant="-26" id="HZy-Z7-RqD"/>
+                            <constraint firstItem="Nwq-bz-t2T" firstAttribute="top" secondItem="gUC-tS-e5P" secondAttribute="bottom" constant="30" id="IRP-0p-6kE"/>
+                            <constraint firstItem="tpt-8D-vuq" firstAttribute="leading" secondItem="AIz-oE-YVN" secondAttribute="trailing" constant="8" id="KnQ-6L-N5R"/>
+                            <constraint firstItem="4cW-a2-aDA" firstAttribute="leading" secondItem="AIz-oE-YVN" secondAttribute="trailing" constant="-91" id="Ows-1o-Mzv"/>
+                            <constraint firstItem="Nwq-bz-t2T" firstAttribute="centerX" secondItem="fOj-0z-AtR" secondAttribute="centerX" id="QGn-Ue-Kze"/>
+                            <constraint firstItem="4cW-a2-aDA" firstAttribute="top" secondItem="UFT-Ni-G2L" secondAttribute="bottom" constant="-8.5" id="XGq-bB-DB5"/>
+                            <constraint firstItem="4cW-a2-aDA" firstAttribute="top" secondItem="Nwq-bz-t2T" secondAttribute="bottom" constant="92" id="e6M-O9-AGY"/>
+                            <constraint firstItem="Nlq-si-hnQ" firstAttribute="top" secondItem="r3o-mm-FDZ" secondAttribute="bottom" constant="8" id="eNr-oe-ImR"/>
+                            <constraint firstItem="AIz-oE-YVN" firstAttribute="top" secondItem="4cW-a2-aDA" secondAttribute="bottom" constant="42" id="gdN-ba-MFa"/>
+                            <constraint firstItem="gUC-tS-e5P" firstAttribute="centerX" secondItem="fOj-0z-AtR" secondAttribute="centerX" id="iJs-Hr-jbq"/>
+                            <constraint firstItem="yaP-WZ-0oW" firstAttribute="top" secondItem="4cW-a2-aDA" secondAttribute="bottom" constant="-9" id="jji-j8-dtC"/>
+                            <constraint firstItem="Thd-iS-rlr" firstAttribute="top" secondItem="Nlq-si-hnQ" secondAttribute="bottom" constant="8" id="lSo-HN-dnf"/>
+                            <constraint firstItem="yaP-WZ-0oW" firstAttribute="leading" secondItem="4cW-a2-aDA" secondAttribute="leading" id="ocl-SZ-VkS"/>
+                            <constraint firstItem="fzQ-sw-ZJa" firstAttribute="trailing" secondItem="4cW-a2-aDA" secondAttribute="trailing" id="zZB-BO-srF"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="u0S-cA-PPq"/>
+                    <connections>
+                        <outlet property="computerDifficultySlider" destination="4cW-a2-aDA" id="HMj-ta-WOs"/>
+                        <outlet property="computerGoesFirstSwitch" destination="AIz-oE-YVN" id="5XA-sR-7oL"/>
+                        <outlet property="computerPlaysItselfButton" destination="Nwq-bz-t2T" id="bgm-89-bvR"/>
+                        <outlet property="onePlayerButton" destination="Thd-iS-rlr" id="A1M-AL-gX3"/>
+                        <outlet property="twoPlayersButton" destination="gUC-tS-e5P" id="I0s-AR-1b2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRk-Rx-7ES" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.60000000000002" y="219.94002998500753"/>
+        </scene>
+        <!--Game Board View Controller-->
+        <scene sceneID="ZrA-VR-E90">
+            <objects>
+                <viewController storyboardIdentifier="GameBoardViewController" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HGX-rR-Jdj" customClass="GameBoardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CDK-YH-XST"/>
+                        <viewControllerLayoutGuide type="bottom" id="HlL-pc-BqR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1bW-fF-FRS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRR-Q7-Ed1">
+                                <rect key="frame" x="16" y="28" width="343" height="49.5"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap a square..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHj-sx-Gwg">
+                                <rect key="frame" x="16" y="88" width="343" height="26.5"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X Wins!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtG-pQ-trR">
+                                <rect key="frame" x="15" y="512" width="343" height="50"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAE-6x-dUw" userLabel="Game Board View">
+                                <rect key="frame" x="16" y="162.5" width="342" height="342"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWo-wP-sXI">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cellButtonSelected:" destination="HGX-rR-Jdj" eventType="touchUpInside" id="CXR-xL-Fav"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fb9-gq-LSA">
+                                        <rect key="frame" x="118" y="0.0" width="106" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cellButtonSelected:" destination="HGX-rR-Jdj" eventType="touchUpInside" id="ZnC-zC-2d4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5e-bG-pai">
+                                        <rect key="frame" x="236" y="0.0" width="106" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cellButtonSelected:" destination="HGX-rR-Jdj" eventType="touchUpInside" id="lTu-KU-ile"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLu-XY-IfV">
+                                        <rect key="frame" x="0.0" y="118" width="106" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cellButtonSelected:" destination="HGX-rR-Jdj" eventType="touchUpInside" id="K7r-ao-Vaf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-it-hjw">
+                                        <rect key="frame" x="118" y="117.5" width="106" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cellButtonSelected:" destination="HGX-rR-Jdj" eventType="touchUpInside" id="pP6-kh-9xR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6A-mk-Ebn">
+                                        <rect key="frame" x="236" y="118" width="106" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cellButtonSelected:" destination="HGX-rR-Jdj" eventType="touchUpInside" id="uc4-0R-nU2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocN-g3-xyG">
+                                        <rect key="frame" x="0.0" y="236" width="106" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cellButtonSelected:" destination="HGX-rR-Jdj" eventType="touchUpInside" id="3c0-tp-0QE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLt-c0-lPC">
+                                        <rect key="frame" x="118" y="236" width="106" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cellButtonSelected:" destination="HGX-rR-Jdj" eventType="touchUpInside" id="dwp-th-irc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBV-Qf-Pqy">
+                                        <rect key="frame" x="236" y="236" width="106" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cellButtonSelected:" destination="HGX-rR-Jdj" eventType="touchUpInside" id="Vmw-ey-izx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="342" id="fbw-PF-bOY"/>
+                                    <constraint firstAttribute="height" constant="342" id="oDt-SO-eK1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqA-jX-Ukl">
+                                <rect key="frame" x="137" y="585" width="100" height="62"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9dq-iK-Qm7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="32"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonSelected:" destination="HGX-rR-Jdj" eventType="touchUpInside" id="yOO-2n-fsX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gRR-Q7-Ed1" secondAttribute="trailing" id="D5n-jv-Add"/>
+                            <constraint firstItem="lHj-sx-Gwg" firstAttribute="top" secondItem="gRR-Q7-Ed1" secondAttribute="bottom" constant="10.5" id="Diy-Ce-NCF"/>
+                            <constraint firstItem="uAE-6x-dUw" firstAttribute="centerY" secondItem="1bW-fF-FRS" secondAttribute="centerY" id="JmV-OZ-1FS"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="lHj-sx-Gwg" secondAttribute="leading" id="KAu-v6-dSS"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="gRR-Q7-Ed1" secondAttribute="leading" id="PHI-4S-rDU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qtG-pQ-trR" secondAttribute="trailing" constant="1" id="Pff-Nl-QZE"/>
+                            <constraint firstItem="HlL-pc-BqR" firstAttribute="top" secondItem="tqA-jX-Ukl" secondAttribute="bottom" constant="20" id="TrT-vf-gpk"/>
+                            <constraint firstItem="tqA-jX-Ukl" firstAttribute="centerX" secondItem="1bW-fF-FRS" secondAttribute="centerX" id="ZkS-gc-BaA"/>
+                            <constraint firstItem="qtG-pQ-trR" firstAttribute="top" secondItem="uAE-6x-dUw" secondAttribute="bottom" constant="7.5" id="eSu-g5-SsQ"/>
+                            <constraint firstItem="qtG-pQ-trR" firstAttribute="leading" secondItem="1bW-fF-FRS" secondAttribute="leadingMargin" constant="-1" id="hxg-pt-hrs"/>
+                            <constraint firstItem="uAE-6x-dUw" firstAttribute="centerX" secondItem="1bW-fF-FRS" secondAttribute="centerX" id="po5-fc-mmd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lHj-sx-Gwg" secondAttribute="trailing" id="unr-tP-H4g"/>
+                            <constraint firstItem="gRR-Q7-Ed1" firstAttribute="top" secondItem="CDK-YH-XST" secondAttribute="bottom" constant="8" id="yiz-hS-4bB"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="bottomLeftButton" destination="ocN-g3-xyG" id="N3x-W7-CM3"/>
+                        <outlet property="bottomMidButton" destination="LLt-c0-lPC" id="EYa-3T-TCp"/>
+                        <outlet property="bottomRightButton" destination="GBV-Qf-Pqy" id="NJ9-H7-K3t"/>
+                        <outlet property="currentPlayerLabel" destination="gRR-Q7-Ed1" id="edh-Zh-7Bu"/>
+                        <outlet property="doneButton" destination="tqA-jX-Ukl" id="oFc-pp-wP6"/>
+                        <outlet property="gameStatusLabel" destination="qtG-pQ-trR" id="7y7-3H-Oaq"/>
+                        <outlet property="instructionLabel" destination="lHj-sx-Gwg" id="HsZ-y1-eSC"/>
+                        <outlet property="midLeftButton" destination="QLu-XY-IfV" id="7Ji-3f-lN6"/>
+                        <outlet property="midMidButton" destination="h7y-it-hjw" id="Zid-Jc-j5k"/>
+                        <outlet property="midRightButton" destination="s6A-mk-Ebn" id="n7v-gV-ofR"/>
+                        <outlet property="topLeftButton" destination="WWo-wP-sXI" id="WGg-w4-Xwm"/>
+                        <outlet property="topMidButton" destination="fb9-gq-LSA" id="FKN-Fr-eZ9"/>
+                        <outlet property="topRightButton" destination="y5e-bG-pai" id="3lv-q1-9xE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VTU-P9-enT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1432.8" y="219.94002998500753"/>
+        </scene>
+    </scenes>
+</document>

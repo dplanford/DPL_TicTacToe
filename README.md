@@ -1,5 +1,5 @@
 # DPL_TicTacToe
-A quicky Tic-Tac-Toe game I built for a coding test for Level 11. It got me the job!
+A quicky Tic-Tac-Toe game I built for a coding test for Level 11. It got me the job! It's just for old school iOS....
 
 Someday I might finish it... it all works, and the algorithm for checking the board for a win is scaleable.
 
